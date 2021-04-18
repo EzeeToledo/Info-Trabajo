@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="EESTN3 - Malvinas Argentinas" />
+
+    <title>Registrador</title>
+    <link rel="stylesheet" href="css/stail.css">
+   
+</head>
+
+<body>
+<header class="menu pr">
+    COMPUTRABAJOS
+    </header>
+    
+<section class="fila pr">
+    <div class="contenedor">
+        <div class="c-ima"> <img src="#" class="ima"></div>
+        <input name="" class="ma" disabled type="text" value="Jimena Fernandez">
+    </div>
+</section>
+<!-----------FIN HEADER------------------->
+<section class="agarratodo">
+
+<section class="fila pr">
+
+
+
+<div>
+       		<form name="" method="get" action="m_perfil.jsp">
+       		
+       		 <center><input class="com" name="de" type="text" placeholder="Ingresar Publicacion" value=""></center>
+       		 
+       		 <br>
+       		 <br>
+       		 <center><input name="" type="submit" value="Publicar"></center>
+       		
+       		</form>
+        </div>
+        <%
+        String de = request.getParameter("de");
+        
+        
+        if(de!=null){
+        	String cad= "INSERT INTO publicacion (`ape`, `nom`, `cuil`, `descr`, `email`,`dni`) VALUES ('"+ape1+"', '"+nom1+"', "+prcuil+", '"+de+"', '"+oso+"', '"+dni+"');";
+        	try{
+        		int n = instruccion.executeUpdate(cad);
+        	}catch(SQLException e){};	
+        }
+        
+        
+        %>
+
+
+
+    <div class="con"><label class="titulo">Mi Contacto</label><br><br>
+    <section class="col15 fl">
+    <li>Nacionalidad</li>
+<li><select name="select">
+<option value="">Seleccionar</option>
+<option value="Argentina">Argentina</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Chile">Chile</option></select>
+</li>
+ </section> 
+<section class="col2075 fl">
+    <li>Dirección</li>
+    <li><input name="" type="text" value="" placeholder="Las Camelias"></li>
+            </section>
+
+<section class="col1025 fl">
+    <li>Número</li>
+    <li><input name="" type="text" value="" placeholder="1566"></li>
+            </section>
+
+ <section class="col2075 fl">
+    <li>Localidad</li>
+    <li><input name="" type="text" value="" placeholder="Del Viso, Pilar"></li>
+            </section> 
+            
+             <section class="col1025 fl">
+    <li>C.P.</li>
+    <li><input class="fl" name="" type="text" value="" placeholder="1667"></li>
+            </section> 
+            
+            <section class="col15 fl">
+    <li>Teléfono</li>
+    <li><input name="" type="text" value="" placeholder="11-1234-9876"></li>
+            </section>
+              
+      <section class="col10 hd fl">
+    <li>Sexo</li>
+    <li><select name="select">
+<option value="">Seleccionar</option>
+
+<option value="M">Masculino</option>
+<option value="F">Femenino</option></select></li>
+            </section> 
+
+            <input class="boton" name="boton" type="submit" value="Cargar">
+     </div>
+       
+    </section> <!---CONTACTO--->
+    
+    
+    
+<section class="fila pr">
+        <!-- ---------------------------------------------------------------------------->
+<div class="con"><label class="titulo">Formación Académica</label><br><br>
+
+<section class="col20 fl">
+    <li>Institución</li>
+    <li><select name="select">
+<option value=""></option>
+
+<option value="hombre">Universidad de Buenos Aires</option>
+<option value="mujer">Universidad de General Sarmiento</option>
+<option value="mujer">Universidad de Moron</option>
+<option value="mujer">Universidad Argentina de la Empresa</option>
+<option value="mujer">Universidad Catolica Argentina</option>
+<option value="mujer">Universidad Abierta Interamericana</option>
+<option value="mujer">Universidad Tecnologica Nacional</option>
+                                        
+</select></li>
+
+    </section>
+
+
+    <section class="col20 fl">
+        <li>Carrera</li>
+<li><select name="select">
+<option value=""></option>
+
+<option value="hombre">Odontologia</option>
+<option value="mujer">Lincenciatura en Administracion</option>
+<option value="mujer">Lincenciatura en Ciencia de la Computacion</option>
+<option value="mujer">Lincenciatura en Bioquimica</option>
+<option value="mujer">Lincenciatura en Periodismo</option>
+<option value="mujer">Lincenciatura en Nutricion</option></select></li>
+    </section>
+
+<section class="col20 fl">
+    <li>Inicio</li>
+    <li><input name="" type="date" value=""></li>
+</section>
+
+<section class="col20 fl">
+    <li>Finalizó</li>
+    <li><input name="" type="date" value=""></li>
+</section>
+
+<section class="col20 fl">
+    <li>Promedio</li>
+    <li><input name="" type="text" value=""></li>
+</section>
+
+<input class="boton" name="btn" type="submit" value="Cargar">
+
+
+</div>
+    </section> <!---FORMACION ACADEMICA--->
+       
+        <!-- ---------------------------------------------------------------------------->
+<section class="fila pr">
+<div class="con"><label class="titulo">Experiencia Laboral</label><br><br>
+<section class="col20 fl">
+    <li>Lugar</li>
+    <li><input name="" type="text" value=""></li>
+</section>
+
+<section class="col20 fl">
+    <li>Puesto</li>
+    <li><input name="" type="text" value=""></li>
+</section>
+
+<section class="col20 fl">
+    <li>Contacto de Referencia</li>
+    <li><input name="" type="text" value=""></li>
+</section>
+ 
+ <section class="col20 fl">
+                    <li>Desde</li>
+                         <li><input name="" type="date" value=""></li></section>
+    
+                    <section class="col20 fl">
+    <li>Fecha Finalizado</li>
+    <li><input name="" type="date" value=""></li>
+</section>
+                    
+           
+            <input class="boton" name="btn" type="submit" value="Cargar">
+        </div>
+        <br><br>
+
+</section> <!---eXPERIENCIA--->
+
+</section>
+</body>
+
+</html>
